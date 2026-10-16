@@ -1,0 +1,154 @@
+/* table of contents 
+1.header design
+2.icons
+3.pop up 
+4.responsive*/
+
+/* Header Styles */
+
+header ul.flex {
+    gap: 16px;
+}
+
+header ul.flex li a {
+    color: var(--title);
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+
+header ul.flex li a:hover {
+    color: var(--bleu);
+    font-size: 1.15rem;
+    font-weight: 500;
+    opacity: 1;
+}
+
+
+header button {
+    font-size: 1.2rem;
+    margin-right: 3rem;
+}
+
+header.flex{
+    justify-content: space-between;
+    padding: 0 2.4 rem;
+    margin-top: 1.5rem;
+}
+
+header.flex nav{
+    background-color: var(--bgheader);
+    padding: 0.7rem 1.6rem;
+    border-radius: 55px;
+    box-shadow:1px 1px 40px rgba(60, 58, 58, 0.375);
+}
+
+header button.menu{
+    display: none;
+
+}
+
+/* style for icons */
+header .icon-menu , header button.mode{
+    background-color: var(--bgheader);
+    height: 2.5rem;
+    width: 2.5rem;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+
+    color: var(--subtitle);
+    border: 1px solid rgba(244, 165, 90, 0.2);
+    transition: 0.2s;
+}
+
+header .icon-menu:hover , header button.mode:hover{
+    color: var(--title);
+    border: 1px solid rgba(244, 165, 90);
+    cursor: pointer;
+}
+
+
+header .icon-cross{
+    font-size: 1.3rem;
+    color: var(--subtitle);
+    transition: 0.2s;
+}
+
+header .icon-cross:hover{
+    color: crimson;
+    font-size: 1.6rem;
+    cursor: pointer;
+    rotate: 180deg;
+}
+
+/* pop up style */
+
+header .fixed{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(40, 40, 40, 0.9);
+    z-index: 1000;
+}
+
+
+header .fixed ul.model{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    padding :1rem 2rem;
+    background-color: var(--secondary-color);
+    animation: zome 0.8s 1;
+}
+
+@keyframes zome{
+    0%{scale: 0;}
+    60%{scale: 1.2;}
+    80%{scale: 0.9;}
+    100%{scale: 1;}
+}
+
+header .fixed ul.model li{
+    border-bottom: 1px solid var(--border-color);
+    padding-top: 0.5rem;
+    padding-bottom: 0.77rem;
+}
+
+
+header .fixed ul.model li:last-child{
+    border :none;
+}
+
+header .fixed ul.model li a{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color:var(--title);
+
+}
+
+header .fixed ul.model li a:hover{
+    color: var(--bleu);
+    font-size: 1.15rem;
+    font-weight: 500;
+    opacity: 1;
+}
+
+header .fixed ul.model li:first-child {
+    text-align: right;
+    border:none;
+    padding-top: 0.2rem;
+    padding-bottom: 0;
+}
+
+
+
+@media(max-width:700px){
+    header.flex nav {display: none;}
+    header button.menu {display: block;}
+}
