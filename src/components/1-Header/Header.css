@@ -93,11 +93,12 @@ header .fixed{
     right: 0;
     background: rgba(40, 40, 40, 0.9);
     z-index: 1000;
+    backdrop-filter: blur(5px);
 }
 
 
 header .fixed ul.model{
-    width: 85%;
+    width: 75%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2rem;

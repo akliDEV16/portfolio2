@@ -8,7 +8,6 @@ function App() {
   return (
     <div className="Container">
       <Header />
-      <div className="line"></div>
       <Hero />
       <div className="line"></div>
       <Main />
